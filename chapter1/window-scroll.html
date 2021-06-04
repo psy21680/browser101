@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        width:200px;
+        height:200px;
+        background-color:blanchedalmond;
+        border-radius: 10px;
+        margin-bottom:4px;
+    }
+    #special{
+        background-color: salmon;
+    }
+    button{
+        position: fixed;
+        width:50px;
+        height:20px;
+    }
+    .button1{
+        right:250px;
+    }
+    .button2{
+        right:190px;
+    }
+    .button3{
+        right:130px;
+    }
+
+
+</style>
+<body>
+    <button class="button1" onclick="scrollBy10()">by10</button>
+    <button class="button2" onclick="scrollTo10()">to10</button>
+    <button class="button3" onclick="scrollInto()">into</button>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div id="special"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+        function scrollBy10(){
+            window.scrollBy(0,100);
+        };
+        function scrollTo10(){
+            window.scrollTo(0,100);
+        };
+        function scrollInto(){
+            const element = document.querySelector("#special")
+            element.scrollIntoView();
+
+        };
+
+    </script>
+</body>
+</html>
